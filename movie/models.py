@@ -5,10 +5,10 @@ def current_year():
     return datetime.date.today().year
 
 def upload_movie_image(instance, filename):
-    return "movies/{filename}".format(filename=filename)
+    return "files/movies/{filename}".format(filename=filename)
 
 def upload_genre_image(instance, filename):
-    return "genre/{filename}".format(filename=filename)
+    return "files/genre/{filename}".format(filename=filename)
 
 # Create your models here.
 
