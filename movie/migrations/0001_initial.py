@@ -6,7 +6,6 @@ import movie.models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
