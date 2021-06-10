@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics, mixins
-from .models import Movie
-from .serializers import MovieSerializer
+from .models import Movie, Genre
+from .serializers import MovieSerializer, GenreSerializer
 
 
 # Create your views here.
@@ -22,3 +22,8 @@ class MovieDetailAPIView(mixins.UpdateModelMixin, generics.RetrieveAPIView):
 
     def patch(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
+
+class GenreAPIView(
+    generics.ListAPIView):
+    serializer_class = GenreSerializer
+    queryset = Genre.objects.all()

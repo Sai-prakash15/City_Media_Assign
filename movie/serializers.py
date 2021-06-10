@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie
+from .models import Movie, Genre
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -19,5 +19,22 @@ class MovieSerializer(serializers.ModelSerializer):
         if name == "":
             name = None
         if name is None:
-            raise serializers.ValidationError("name is required")
+            raise serializers.ValidationError("Movie name is required")
+        return data
+
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = [
+            'id',
+            'name',
+            'image',
+        ]
+
+    def validate(self, data):
+        name = data.get("name", None)
+        if name == "":
+            name = None
+        if name is None:
+            raise serializers.ValidationError("Genre name is required")
         return data
