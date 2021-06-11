@@ -38,7 +38,7 @@ class Genre(models.Model):
 class Movie(models.Model):
     name = models.CharField(max_length=100, help_text='Enter movie name', unique=True)
     release_year = models.IntegerField(default=current_year)
-    genre = models.OneToOneField(Genre, on_delete=models.CASCADE)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     rating = models.FloatField()
     image = models.ImageField(upload_to=upload_movie_image, blank=True, null=True)
 

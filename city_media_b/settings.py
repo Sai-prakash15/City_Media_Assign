@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # thirdparty
     'rest_framework',
+    'django_extensions',
     # Local
     'movie'
 ]
