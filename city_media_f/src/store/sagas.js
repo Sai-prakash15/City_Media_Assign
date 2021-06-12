@@ -14,8 +14,9 @@ export function* fetchMoviesSaga(action) {
  export function* InitialSaga(action) {
     try {
         const response = yield axios.get(`http://127.0.0.1:8000/movies/?q=Action`)
-        const movies = response.data
-       yield put({type: actionTypes.UPDATEM, movies: movies});
+        const responseg = yield axios.get(`http://127.0.0.1:8000/genre/`)
+        yield put({type: actionTypes.UPDATEM, movies: response.data});
+        yield put({type: actionTypes.UPDATEG, genres: responseg.data});
     } catch (e) {
         console.log("err")
     }

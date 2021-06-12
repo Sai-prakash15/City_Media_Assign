@@ -9,7 +9,9 @@ class GenreSection extends Component {
   render(){
     const { genres, curr_genre } = this.props
     let active = false;
-    let genres_list = genres.map((item, index) => {
+    let genres_list = <p> Loading</p>
+    if(genres != null){
+    genres_list = genres.map((item, index) => {
         if(item.name == curr_genre){
             active = true
         }
@@ -18,7 +20,8 @@ class GenreSection extends Component {
         }
         return(
         <GenreItem item={item} index={index} key={index} active={active} />
-    )});
+    )});}
+    
 
     return(  
     <Flex  color="white" w ="100%"  textAlign="center"  pt ="10" > 
