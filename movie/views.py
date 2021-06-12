@@ -13,6 +13,7 @@ class MovieAPIView(
     generics.ListAPIView):
     serializer_class = MovieSerializer
     queryset = Movie.objects.all()
+    search_fields = ['genre__name']
 
 
 class MovieDetailAPIView(mixins.UpdateModelMixin, generics.RetrieveAPIView):
