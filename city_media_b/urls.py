@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from movie.views import GenreAPIView, loadData
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', include('movie.urls')),

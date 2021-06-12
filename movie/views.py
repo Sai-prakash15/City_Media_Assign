@@ -6,6 +6,7 @@ from .serializers import MovieSerializer, GenreSerializer
 import pandas as pd
 from rest_framework.response import Response
 
+
 # Create your views here.
 
 class MovieAPIView(
@@ -24,6 +25,7 @@ class MovieDetailAPIView(mixins.UpdateModelMixin, generics.RetrieveAPIView):
 
     def patch(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
+
 
 class GenreAPIView(
     generics.ListAPIView):

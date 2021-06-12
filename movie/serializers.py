@@ -22,6 +22,7 @@ class MovieSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Movie name is required")
         return data
 
+
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
