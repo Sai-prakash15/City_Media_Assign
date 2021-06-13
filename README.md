@@ -28,4 +28,5 @@ In 2nd Terminal/Prompt:
 2. npm install
 3. npm start
 4. Visit localhost:3000/ to interact with the application.
-(To navigate back from movie screen rely on browser back button)
+
+(To navigate back from Movie Info screen to Home Screen rely on browser back button)
