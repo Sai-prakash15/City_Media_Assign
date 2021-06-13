@@ -1,16 +1,12 @@
 import {  Text, Heading, Flex, Select} from "@chakra-ui/react";
 import {
-    FormControl,
     FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-    Form,
-    Field,Input,Button
+    Button
   } from "@chakra-ui/react"
 import React, { Component }  from 'react';
 import { connect } from 'react-redux'
 import { updateMovieSaga } from "../../store/actions";
-import { getMovies } from '../../store/actions'
+
 class MovieInfo extends Component {
     constructor(props) {
         super(props);
