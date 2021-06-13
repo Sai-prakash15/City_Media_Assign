@@ -3,13 +3,14 @@ from .models import Movie, Genre
 
 
 class MovieSerializer(serializers.ModelSerializer):
+    genre_name = serializers.CharField(source='genre.name', read_only=True)
     class Meta:
         model = Movie
         fields = [
             'id',
             'name',
             'release_year',
-            'genre',
+            'genre_name',
             'rating',
             'image',
         ]

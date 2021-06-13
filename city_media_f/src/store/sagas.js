@@ -1,4 +1,4 @@
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
+import { put } from 'redux-saga/effects'
 import * as actionTypes from './actions';
 import axios from 'axios';
 export function* fetchMoviesSaga(action) {

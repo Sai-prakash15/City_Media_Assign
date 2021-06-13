@@ -9,8 +9,6 @@ class MovieSection extends Component {
 
   } 
 
-
-
   render(){
     const { curr_movies } = this.props
     let movieTiles = <p>...loading</p>

@@ -12,7 +12,7 @@ class GenreSection extends Component {
     let genres_list = <p> Loading</p>
     if(genres != null){
     genres_list = genres.map((item, index) => {
-        if(item.name == curr_genre){
+        if(item.name === curr_genre){
             active = true
         }
         else{

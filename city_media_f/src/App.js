@@ -1,10 +1,10 @@
-// import MovieItem from "./components/Movie/MovieItem";
-import IndexPage from "./components/Index/index"
 import { ChakraProvider } from "@chakra-ui/react";
+import Routes from './Routes';
+
 function App() {
   return (
       <ChakraProvider>
-        <IndexPage />
+        <Routes />
       </ChakraProvider>
   );
 }

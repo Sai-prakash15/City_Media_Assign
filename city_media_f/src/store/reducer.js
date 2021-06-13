@@ -3,7 +3,8 @@ import * as actionTypes from './actions';
 const initialState = {
     genres: null,
     curr_movies : null,
-    curr_genre: "Action"
+    curr_genre: "Action",
+    movie: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 genres: action.genres
+            }
+        case actionTypes.MOVIE:
+            return{
+                ...state,
+                movie: action.item
             }
     }
 
