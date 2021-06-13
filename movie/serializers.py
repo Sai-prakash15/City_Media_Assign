@@ -12,6 +12,7 @@ class MovieSerializer(serializers.ModelSerializer):
             'release_year',
             'genre_name',
             'rating',
+            'genre',
             'image',
         ]
 
@@ -22,6 +23,17 @@ class MovieSerializer(serializers.ModelSerializer):
         if name is None:
             raise serializers.ValidationError("Movie name is required")
         return data
+
+class MovieDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = [
+            'id',
+            'name',
+            'genre',
+            'rating',
+            'image',
+        ]
 
 
 class GenreSerializer(serializers.ModelSerializer):

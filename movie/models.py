@@ -39,7 +39,7 @@ class Movie(models.Model):
     name = models.CharField(max_length=100, help_text='Enter movie name', unique=True)
     release_year = models.IntegerField(default=current_year)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    rating = models.FloatField()
+    rating = models.FloatField( blank=True, null=True)
     image = models.ImageField(upload_to=upload_movie_image, blank=True, null=True)
 
     def __str__(self):

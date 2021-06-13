@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-s2vlzd8oh@s+&kcqt+_j+_g$g)%@#k1me!mha)$ca!z6wdpiw+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     # thirdparty
     'rest_framework',
     'django_extensions',
+    'corsheaders',
     # Local
     'movie'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,3 +135,8 @@ REST_FRAMEWORK = {
     'SEARCH_PARAM': 'q',
     'ORDERING_PARAM': 'ordering',
 }
+
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+  'http://localhost:3000',
+)

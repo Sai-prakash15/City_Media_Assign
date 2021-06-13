@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics, mixins, status
 from rest_framework.views import APIView
 from .models import Movie, Genre
-from .serializers import MovieSerializer, GenreSerializer
+from .serializers import MovieSerializer, GenreSerializer, MovieDetailSerializer
 import pandas as pd
 from rest_framework.response import Response
 
@@ -18,7 +18,7 @@ class MovieAPIView(
 
 class MovieDetailAPIView(mixins.UpdateModelMixin, generics.RetrieveAPIView):
     queryset = Movie.objects.all()
-    serializer_class = MovieSerializer
+    serializer_class = MovieDetailSerializer
     lookup_field = 'id'
 
     def put(self, request, *args, **kwargs):

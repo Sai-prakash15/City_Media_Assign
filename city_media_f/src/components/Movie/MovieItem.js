@@ -27,7 +27,7 @@ function MovieItem (props) {
     <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Movie Information</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               Movie name: {item.name} <br/>
