@@ -131,6 +131,7 @@ REST_FRAMEWORK = {
         ),
     'DEFAULT_FILTER_BACKENDS': (
         'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter'
     ),
     'SEARCH_PARAM': 'q',
     'ORDERING_PARAM': 'ordering',

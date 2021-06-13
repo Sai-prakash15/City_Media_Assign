@@ -14,6 +14,7 @@ class MovieAPIView(
     serializer_class = MovieSerializer
     queryset = Movie.objects.all()
     search_fields = ['genre__name']
+    ordering_fields = ['rating']
 
 
 class MovieDetailAPIView(mixins.UpdateModelMixin, generics.RetrieveAPIView):
