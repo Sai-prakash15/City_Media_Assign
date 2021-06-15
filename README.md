@@ -30,3 +30,14 @@ In 2nd Terminal/Prompt:
 4. Visit localhost:3000/ to interact with the application.
 
 (To navigate back from Movie Info screen to Home Screen rely on browser back button)
+
+## Sample Screen Shots from Front-End ##
+
+Home Screen:
+
+![alt Homescreen1](https://github.com/Sai-prakash15/City_Media_Assign/blob/master/Sample_images/Home_screen_!.png?raw=true)
+![alt Homescreen2](https://github.com/Sai-prakash15/City_Media_Assign/blob/master/Sample_images/Home_screen_2.png?raw=true)
+
+Movie Info Screen:
+
+![alt MovieInfo](https://github.com/Sai-prakash15/City_Media_Assign/blob/master/Sample_images/Movie_info.png?raw=true)
