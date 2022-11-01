@@ -1,8 +1,8 @@
-# City Online Technical Assignment  #
+<!--# City Online Technical Assignment  #
 
 By Sai Prakash Chittampalli
 
-## The Challenge ##
+## The Challenge ## -->
 
 An application that lists top 100 movies categorised by genre and sorted by rating.
 
